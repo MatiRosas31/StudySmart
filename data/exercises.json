@@ -1,0 +1,24 @@
+[
+    {
+        "nombre": "Logica",
+        "materia": "Matematica",
+        "ejercicios": [
+            {
+                "tipo": "multiple",
+                "letra_principal": "Analiza cada una de las situaciones",
+                "sub_cons": [
+                    {
+                        "id": "Analiza cada una de las situacionesa",
+                        "consigna": "papapa",
+                        "solucion": "lalala"
+                    },
+                    {
+                        "id": "Analiza cada una de las situacionesb",
+                        "consigna": "dsadad",
+                        "solucion": "dasdad"
+                    }
+                ]
+            }
+        ]
+    }
+]
