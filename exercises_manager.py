@@ -121,14 +121,26 @@ def practicar_mazo():
     print(f"\n=== PRACTICANDO: {mazo['nombre']} ===")
 
     for i, e in enumerate(mazo["ejercicios"], start=1):
-        print(f"\nEjercicio {i}: {e['consigna']}")
-        r = input("Tu respuesta: ")
-        respuestas_usuario.append(r)
-        soluciones.append(e["solucion"])
+        if e["tipo"] == "simple":
+            # Ejercicio simple
+            print(f"\nEjercicio {i}: {e['consigna']}")
+            r = input("Tu respuesta: ")
+            respuestas_usuario.append(r)
+            soluciones.append(e["solucion"])
+        elif e["tipo"] == "multiple":
+            # Ejercicio con sub-consignas
+            print(f"\nEjercicio {i}: {e['letra_principal']}")
+            for sub in e["sub_cons"]:
+                print(f"  Sub-consigna {sub['id']}: {sub['consigna']}")
+                r = input("Tu respuesta: ")
+                respuestas_usuario.append(r)
+                soluciones.append(sub["solucion"])
 
+    # Pedir nivel de confianza para cada respuesta
+    for i in range(len(respuestas_usuario)):
         while True:
             try:
-                conf = int(input("Nivel de confianza (1–5): "))
+                conf = int(input(f"Nivel de confianza para la respuesta {i + 1} (1–5): "))
                 if 1 <= conf <= 5:
                     niveles_confianza.append(conf)
                     break
