@@ -1,0 +1,9 @@
+""""
+Tareas:
+1) Trabajar en las tareas de recuperacion de ejercicios segun el usuario para dejarlas prontas para el front
+2) Se deberia devolver un JSON con los ejercicios como objetos
+    2.1) En la devolucion que se devuelvan todas las columnas incluyendo el id de ejercicio y cuando fue creado. Puede ser util para el front
+3) Deberiamos agrupar los ejercicios en mazos? Quizas agregar una columna y poner ahi el numero de mazo o bueno hacer otra tabla para cada mazo
+
+
+"""
